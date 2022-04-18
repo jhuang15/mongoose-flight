@@ -9,20 +9,19 @@ const flightSchema = new Schema({
   },
   airport: {
     type: String,
-    default: 'DEN',
-    enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
+    enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
+    default: 'DEN'
   },
   flightNo: {
     type: Number,
     required: true,
-    //array of nums 10-9000
+    min: 10,
+    max: 999
   },
   departs: {
     type: Date,
-    default: function() {
-      return new Date();
-    }
-  } 
+    default: Date.now() + 365*24*60*60000
+  }
 });
 
 // Compile the schema into a model and export it

@@ -11,7 +11,9 @@
       </tr>
     </thead>
     <tbody>
- <!-- Write the line of EJS to iterate over movies using forEach -->
+    <% flights.sort(function(a, b) { %>
+      <% return a.departs - b.departs %>
+    <% }) %>
     <% flights.forEach(function(f) { %>
       <tr>
         <td><%= f.airline %></td>
@@ -19,7 +21,6 @@
         <td><%= f.flightNo %></td>
         <td><%= f.departs %></td>
       </tr>
-     <!-- Close the forEach using EJS here -->
     <% }) %>
     </tbody>
   </table>

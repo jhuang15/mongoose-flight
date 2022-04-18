@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Enter a new flight</h2>>
+<h2>Enter a new flight</h2>
 <form action="/flights" method="POST">
   <label>Select Airline:
     <select name="airline">
@@ -27,8 +27,10 @@
   </label><br>
 
   <label>Depart Date:
-    <input type="date" name="depart">
+    <input type="datetime-local" name="departs">
   </label><br>
   
   <input type="submit" value="Add Flight">
 </form>
+
+<%- include('../partials/footer') %>
