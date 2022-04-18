@@ -15,14 +15,12 @@ const flightSchema = new Schema({
   flightNo: {
     type: Number,
     required: true,
-    enum: function (arr) {
-      return arr.push()
-    } //array of nums 10-9000
+    //array of nums 10-9000
   },
   departs: {
     type: Date,
     default: function() {
-      return new Date().getFullYear()+1;
+      return new Date();
     }
   } 
 });

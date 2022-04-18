@@ -9,7 +9,7 @@ module.exports = {
 function index(req, res) {
   Flight.find({}, function(err, flights) {
     res.render('flights/index', { flights});
-  })
+  });
 }
 
 function create(req, res) {
@@ -21,7 +21,7 @@ function create(req, res) {
     console.log(flight)
 
     res.redirect('/flights');
-  })
+  });
 }
 
 function newFlight(rew, res) {
