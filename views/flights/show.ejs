@@ -1,17 +1,14 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Airline: </div>
-  <div><%= flight.airline %></div>
-  <div>Airport: </div>
-  <div><%= flight.airport %></div>
-  <div>flight No: </div>
-  <div><%= flight.flightNo %></div>
-  <div>Depart Date: </div>
+  <div>Airline: <%= flight.airline %></div>
+  <div>Airport: <%= flight.airport %></div>
+  <div>flight No: <%= flight.flightNo %></div>
+  <div>Depart Date:
   <% if (flight.departs < Date.now()) { %>
-    <div style="color:red"><%= flight.depart %></div>
+    <span style="color:red"><%= flight.departs %></span>
     <% } else { %>
-    <div><%= flight.depart%></div>
+    <%= flight.departs%></div>
   <% }%>
 </section>
 
