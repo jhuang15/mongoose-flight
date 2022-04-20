@@ -8,7 +8,7 @@ function create (req,res) {
   Flight.findById(req.params.id, function(err, flight) {
     flight.destinations.push(req.body);
     //Save the updated flight 
-    flight.sav(function(err) {
+    flight.save(function(err) {
       //redirect
       res.redirect(`/flights/${req.params.id}`);
     });

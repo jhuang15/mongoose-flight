@@ -13,20 +13,19 @@
 </section>
 
 <br><br><h2>Destinations</h2>
-<form method="POST"
-  action="/flights/<%= flight._id %>/destinations">
-  <label>Airport: 
+<form method="POST" action="/flights/<%= flight._id %>/destinations">
+  <label>Airport: </label>
     <select name="airport">
-      <option value="AUS">AUD</option>
+      <option value="AUS">AUS</option>
       <option value="DFW">DFW</option>
       <option value="DEN">DEN</option>
       <option value="LAX">LAX</option>
       <option value="SAN">SAN</option>
     </select>
-  </label><br>
-  <label>Arrival:</label>
+  <label>Arrival:
   <input type="datetime-local" name="arrival">
-</label><br>
+</label>
+  <input type="submit" value="Add Arrival">
 </form>
 
 <% if (flight.destinations.length) { %>
