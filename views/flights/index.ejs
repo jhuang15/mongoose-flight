@@ -20,7 +20,7 @@
         <td><%= f.airport %></td>
         <td><%= f.flightNo %></td>
         <% if (f.departs < Date.now()) {%>
-        <td><%= f.departs.toLocaleString() %></td>
+        <td><%= f.departs%></td>
         <% } else { %>
         <td> <%= f.departs %></td>
         <% } %>
